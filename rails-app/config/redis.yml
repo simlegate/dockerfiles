@@ -1,0 +1,16 @@
+default: &default
+  host: 127.0.0.1
+  port: 6379
+  db: 8
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  host: <%= ENV['REDIS_HOST'] || '127.0.0.1' %>
+  port: <%= ENV['REDIS_PORT'] || 6379 %>
+  db: <%= ENV['REDIS_DB'] || 8 %>
