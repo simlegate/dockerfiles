@@ -1,9 +1,11 @@
 #### build Nginx docker image
 * generate static files by
-      RAILS_ENV=production rake assets:precompile
+
+        RAILS_ENV=production rake assets:precompile
 
 * build image
-      docker build -t app-proxy -f dockers/Dockerfile-nginx .
+
+        docker build -t app-proxy -f dockers/Dockerfile-nginx .
 
 #### build Rails docker image
 
