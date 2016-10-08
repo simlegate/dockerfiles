@@ -6,8 +6,6 @@ WORKDIR /usr/src/app
 
 COPY Gemfile ./Gemfile
 
-COPY lib lib
-
 RUN bundle install --without development test
 
 COPY . /usr/src/app
